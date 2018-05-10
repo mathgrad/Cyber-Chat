@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tutorial</title>
+    <link href="CSS/Feud.css" rel="stylesheet" />
+    <style type="text/css">
+        body {
+            font-size: 16pt;
+        }
+    </style>
+</head>
+<body>
+    <div class="panel panel-primary" style="width:1200px;margin: auto; padding-left: 0px; padding-right:0px;">
+        <div class="panel-heading">
+            <h1>
+                The Family Feud Game Tutorial
+                <br />
+                (Gameplay and Technical)
+            </h1>
+        </div>
+        <div class="panel-body" style="text-align:left;">
+            <div style="border: 3px solid black; padding-left: 10px; width: 450px;">
+                <h2>Table of Contents</h2>
+                <h4>
+                    <ul>
+                        <li>
+                            <a href="#Gameplay">Gameplay</a>
+                            <ol>
+                                <li><a href="#Started">Getting Started</a></li>
+                                <li><a href="#Main">Operating Main</a></li>
+                                <li><a href="#Select">Question Select</a></li>
+                                <li><a href="#Question">Operating Question</a></li>
+                                <li><a href="#Score">Team Score</a></li>
+                            </ol>
+                        </li>
+                        <br />
+                        <li>
+                            <a href="#Technical">Technical (i.e. customizing the website)</a>
+                            <ol>
+                                <li><a href="#Summary">Summary</a></li>
+                                <li><a href="#CustomizingQuestions">Customizing Questions</a></li>
+                                <li><a href="#Questionsjs">Questions.js</a></li>
+                                <li><a href="#Credits">Credits.html</a></li>
+                                <li><a href="#Sounds">Sounds</a></li>
+                            </ol>
+                        </li>
+                    </ul>
+                </h4>
+            </div>
+            <h4>
+                <p>Contents</p>
+                <ul>
+                    <li>
+                        <p id="Gameplay">Gameplay<p>
+                            <ol>
+                                <li id="Started">
+                                    Getting Started	<div class="triangle"></div>
+                                    <ul id="Startedchild">
+                                        <li>Open the folder titled "Feud"</li>
+                                        <li>Open the file titled "Main.html"</li>
+                                        <li>Familiarize yourself with the page</li>
+                                    </ul>
+                                </li>
+                                <br />
+                                <li id="Main">
+                                    Operating Main	<div class="triangle"></div>
+                                    <ul id="Mainchild">
+                                        <li>Consider the following options: Question Select, Credits, Score, Sound Board and Tutorial</li>
+                                        <li>Question Select happens in the table</li>
+                                        <li>Credits displays a cinematic scroll of people to be thanked</li>
+                                        <li>Score handles team names and score</li>
+                                        <li>Sound Board embeds sounds into the page and allows you to operate each sound at your leisure</li>
+                                        <li>Tutorial takes you to this page</li>
+                                    </ul>
+                                </li>
+                                <br />
+                                <li id="Select">
+                                    Question Select	<div class="triangle"></div>
+                                    <ul id="Selectchild">
+                                        <li>The questions setup: Catagory, Question Number, Select (that question), Answers (displays the answer)</li>
+                                        <li>Catagory displays predefined sections</li>
+                                        <li>Question Number displays the index for each question. Use this dropdown box to select the question</li>
+                                        <li>
+                                            Select does the following:
+                                            <ol>
+                                                <li>Opens the select question in a separate tab</li>
+                                                <li>Displays the answer on the Main page</li>
+                                                <li>Redirects focus to the question page</li>
+                                            </ol>
+                                        </li>
+                                        <li>Answers displays the answer on the Main page</li>
+                                    </ul>
+                                </li>
+                                <br />
+                                <li id="Question">
+                                    Operating Question	<div class="triangle"></div>
+                                    <ul id="Questionchild">
+                                        <li>The question page always starts with the logo of the game</li>
+                                        <li>Click to continue</li>
+                                        <li>The question is displayed at the top of the page, the answers are covered, and the answer input area is under the answers</li>
+                                        <li>
+                                            The three buttons: Check Answer, Reset Game, Show Answers
+                                            <ul>
+                                                <li>Check Answer works via taking the answer input's value and checks to see if it is a valid solution. if wrong, then the misses will show, else the answer shows</li>
+                                                <li>Reset Game removes all misses and covers the answers again</li>
+                                                <li>Show Answers shows the answers</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <br />
+                                <li id="Score">
+                                    Team Score	<div class="triangle"></div>
+                                    <ul id="Scorechild">
+                                        <li>The page displays a table with an empty row titled "Team Names" and a Score row with green and red buttons</li>
+                                        <li>Enter the team names in the blank places</li>
+                                        <li>The green button increases the score to the right and the red button decreases the score tot he left</li>
+                                        <li>You can manually enter the score if necessary</li>
+                                        <li>Main takes you back tot he main page</li>
+                                    </ul>
+                                </li>
+                            </ol>
+                    </li>
+                    <li>
+                        <p id="Technical">Technical</p>
+                        <ol>
+                            <li id="Summary">
+                                Overview	<div class="triangle"></div>
+                                <br />
+                                <div id="Summarychild" style="display:none;">
+                                    The website's layout's simplitic nature hides the hidden complexity. (Okay, javascript handles most of the heavy lifting.)
+                                    <br />
+                                    <ul>
+                                        <li>As for physical structure: Main folder contains webpages, and folders (Audio, CSS, Images, Script)</li>
+                                        <li>Audio folder contains audio files (all wav files, which don't work in IE)</li>
+                                        <li>CSS contains the lone css file (Feud.css)</li>
+                                        <li>Images contains the images of the website</li>
+                                        <li>Script contains the javascript files (Question.js, Score.js, SetUp.js, Tutorial.js). Simple javascript</li>
+                                    </ul>
+                                    <ul>
+                                        <li>The five main documents, (Feud.css, Question.js, Score.js, SetUp.js, Tutorial.js), should be hidden from any non-developer. </li>
+                                        <li>The six html documents, (Base.html, Credits.html, Main.html, Question.html, Tutorial.html), are located in the initial folder.</li>
+                                        <li>Each separate "question" comes from a matrix located in the Question.js. (Stricktly speaking, an (n,n,m) matrix, st n,m elements of N)</li>
+                                        <li>Feud.css handles animations (letter color changing, and credits scroll) and styling</li>
+                                        <li>Question.js handles cleaning answers, verifying correctness and triggering actions afterwards</li>
+                                        <li>Score.js handles team score and filtering input.</li>
+                                        <li>SetUp.js handles selecting each separate "question" through a REST get.</li>
+                                        <li>Tutorial.js handles the hiding and showing of the elements in each list</li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <br />
+                            <li>
+                                <div id="CustomizingQuestions">Customizing Questions	<div class="triangle"></div></div>
+                                <ol id="CustomizingQuestionschild">
+                                    <li id="add">
+                                        Adding <div class="triangle"></div>
+                                        <ul id="addchild">
+                                            <li>
+                                                Go to the SetUp.js
+                                                <ol>
+                                                    <li>
+                                                        Add in new API for the particular catagory
+                                                        <br />
+                                                        (The html Question.html?val=n&type=m describes the question to the page. val handles the question index. type handles the new catagory)
+                                                    </li>
+                                                    <li>
+                                                        Add in two new arrays:
+                                                        <ul>
+                                                            <li>One will be the question array</li>
+                                                            <li>One will be a matrix of the answers to its respective question</li>
+                                                        </ul>
+                                                    </li>
+                                                    <li>I am skipping some customization that needs to happen. Change up several of the switch statements to include the new type</li>
+                                                </ol>
+                                            </li>
+                                            <li>
+                                                Go to the Main.html
+                                                <ol>
+                                                    <li>
+                                                        Add in a new row
+                                                        <ul>
+                                                            <li>Follow the format defined above</li>
+                                                            <li>The correct links are already provided, so copy pasta</li>
+                                                        </ul>
+                                                    </li>
+                                                    <li>
+                                                        Make sure the buttons are set up correctly, with the SetUp.js calling those new buttons
+                                                    </li>
+                                                </ol>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li id="remove">
+                                        Removing <div class="triangle"></div>
+                                        <ul id="removechild">
+                                            <li>
+                                                Go to the SetUp.js
+                                                <ol>
+                                                    <li>Remove the appropriate matrix (the two arrays) of the catagory</li>
+                                                    <li>Remove the logic for that type in the switch statements</li>
+                                                    <li>Remove the elements that are associated with the catagory</li>
+                                                </ol>
+                                            </li>
+                                            <li>
+                                                Go to the Main.html
+                                                <ol>
+                                                    <li>Delete the table row associated with that catagory</li>
+                                                </ol>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>Editing, just use the information from adding, and removing to figure it out.</li>
+                                </ol>
+                            </li>
+                            <br />
+                            <li id="Questionsjs">
+                                Questions.js
+                                <br />
+                                All functionality for cleaning up and checking answers lie here. The sound effects are played here.
+                            </li>
+                            <br />
+                            <li id="Credits">
+                                Credits.html
+                                <br />
+                                All CSS3 baby, ah yeah. So to change up the animation, alter the Feud.css marque class.<br />
+                                In simplistic terms, the webpage moves a block element (the credits) from off-screen to the top of the page till a certain distance is reached.
+                                So, the final credit that ends in the middle has to be adjusted after each change.
+                            </li>
+                            <br />
+                            <li id="Sounds">
+                                Sounds
+                                <br />
+                                Embeded into the page with HTML5. So each individual page has its own audio elements, and the javascript calls that element to play it.
+                            </li>
+                        </ol>
+                    </li>
+                </ul>
+            </h4>
+        </div>
+        <div class="panel-footer">
+        </div>
+    </div>
+    <script src="Script/Tutorial.js" type="text/javascript"></script>
+</body>
+</html>

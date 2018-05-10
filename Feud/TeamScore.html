@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Team Score</title>
+    <link href="CSS/Feud.css" rel="stylesheet" />
+    <style type="text/css">
+        body {
+            overflow: hidden;
+        }
+
+        table {
+            padding-left: 50px;
+            padding-right: 50px;
+            margin: auto;
+        }
+
+        .table > thead > tr > th, .table > tbody > tr > th, .table > tfoot > tr > th, .table > thead > tr > td, .table > tbody > tr > td, .table > tfoot > tr > td {
+            border-top: none;
+            text-align: center;
+        }
+
+        input {
+            width: 85px;
+            text-align: center;
+            font-size: 20pt;
+            border-top: none;
+            border-left: none;
+            border-right: none;
+        }
+
+        .teamNames {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .red {
+            background-color: red;
+            border-color: red;
+            color: green;
+        }
+
+        .yellow {
+            background-color: yellow;
+            border-color: yellow;
+            color: purple;
+        }
+
+        .green {
+            background-color: green;
+            border-color: green;
+            color: red;
+        }
+
+        .blue {
+            background-color: blue;
+            border-color: blue;
+            color: orange;
+        }
+    </style>
+</head>
+<body>
+    <div style="height:25vh"></div>
+    <div class="panel panel-primary" style="width:1500px; margin:auto;">
+        <div class="panel-heading">
+            <span class="question">Team Scores</span>
+        </div>
+        <div class="panel-body">
+            <table class="table">
+                <tr>
+                    <td colspan=12><span class="teamNames">Team Names</td>
+                </tr>
+                <tr>
+                    <td colspan="3" class="red"><input id="Team1" readonly value="Red" /></td>
+                    <td colspan="3" class="yellow"><input id="Team2" readonly value="Yellow" /></td>
+                    <td colspan="3" class="green"><input id="Team3" readonly value="Green" /></td>
+                    <td colspan="3" class="blue"><input id="Team4" readonly value="Blue" /></td>
+                </tr>
+                <tr>
+                    <td><button class="pos" id="Team1Add"></button></td>
+                    <td class="red"><input id="Score1" value="0" /></td>
+                    <td><button class="neg" id="Team1Subtract"></button></td>
+                    <td><button class="pos" id="Team2Add"></button></td>
+                    <td class="yellow"><input id="Score2" value="0" /></td>
+                    <td><button class="neg" id="Team2Subtract"></button></td>
+                    <td><button class="pos" id="Team3Add"></button></td>
+                    <td class="green"><input id="Score3" value="0" /></td>
+                    <td><button class="neg" id="Team3Subtract"></button></td>
+                    <td><button class="pos" id="Team4Add"></button></td>
+                    <td class="blue"><input id="Score4" value="0" /></td>
+                    <td><button class="neg" id="Team4Subtract"></button></td>
+                </tr>
+            </table>
+        </div>
+        <div class="panel-footer">
+            <a class="button" href="Main.html" style="width:300px;">Main</a>
+        </div>
+    </div>
+    <script src="Script/Score.js" type="text/javascript"></script>
+</body>
+</html>

@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Welcome</title>
+    <link href="CSS/Feud.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="middle"></div>
+    <div class="panel panel-primary" style="width:1200px;margin: auto; padding-left: 0px; padding-right:0px;">
+        <div class="panel-heading">
+            <h1>Welcome to the Control Panel</h1>
+        </div>
+        <div class="panel-body">
+            <table id="mainTable">
+                <tr>
+                    <td>
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <td class="title">Catagory</td>
+                                    <td class="title">Question Number</td>
+                                    <td class="title"></td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="title">SCPD</td>
+                                    <td>
+                                        <select id="SCPDSelect">
+                                            <option value="Question.html?val=0">1</option>
+                                            <option value="Question.html?val=1">2</option>
+                                            <option value="Question.html?val=2">3</option>
+                                            <option value="Question.html?val=3">4</option>
+                                            <option value="Question.html?val=4">5</option>
+                                            <option value="Question.html?val=5">6</option>
+                                            <option value="Question.html?val=6">7</option>
+                                            <option value="Question.html?val=7">8</option>
+                                            <option value="Question.html?val=8">9</option>
+                                        </select>
+                                    </td>
+                                    <td><button id="SCPDbtn" class="button">Select</button></td>
+                                    <td><button id="SCPDans" class="button">Answers</button></td>
+                                </tr>
+                                <tr>
+                                    <td class="title">SCPL</td>
+                                    <td>
+                                        <select id="SCPLSelect">
+                                            <option value="Question.html?val=0">1</option>
+                                            <option value="Question.html?val=1">2</option>
+                                            <option value="Question.html?val=2">3</option>
+                                            <option value="Question.html?val=3">4</option>
+                                            <option value="Question.html?val=4">5</option>
+                                            <option value="Question.html?val=5">6</option>
+                                            <option value="Question.html?val=6">7</option>
+                                            <option value="Question.html?val=7">8</option>
+                                        </select>
+                                    </td>
+                                    <td><button id="SCPLbtn" class="button">Select</button></td>
+                                    <td><button id="SCPLans" class="button">Answers</button></td>
+                                </tr>
+                                <tr>
+                                    <td class="title">SCPT</td>
+                                    <td>
+                                        <select id="SCPTSelect">
+                                            <option value="Question.html?val=0">1</option>
+                                            <option value="Question.html?val=1">2</option>
+                                            <option value="Question.html?val=2">3</option>
+                                            <option value="Question.html?val=3">4</option>
+                                        </select>
+                                    </td>
+                                    <td><button id="SCPTbtn" class="button">Select</button></td>
+                                    <td><button id="SCPTans" class="button">Answers</button></td>
+                                </tr>
+                                <tr>
+                                    <td class="title">Example</td>
+                                    <td><a class="button" href="Base.html" target="_blank">Example</a></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                    <td id="AnswerArea" style="display:none;">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <td class="title">Answers</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td rowspan=3><textarea id="TextAreaAnswer" style="text-align:left;" readonly></textarea></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+            <table id="mainTable" style="background-color:black; color:white;">
+                <tr>
+                    <td>
+                        <table class="controlTable">
+                            <tr>
+                                <td colspan=2 class="title">Sound Board</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <td class="title" colspan=3>Songs</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td><label class="SoundLabel">Family Feud Theme</label></td>
+                                                <td><label class="SoundLabel">Viva la Vida</label></td>
+                                                <td><label class="SoundLabel">The Who's Who Are You?</label></td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <audio controls>
+                                                        <source src="Audio/ff-theme.wav" type="audio/wav">
+                                                        Your browser does not support the audio element.
+                                                    </audio>
+                                                </td>
+                                                <td>
+                                                    <audio controls>
+                                                        <source src="Audio/Viva la Vida.mp3" type="audio/mp3">
+                                                        Your browser does not support the audio element.
+                                                    </audio>
+                                                </td>
+                                                <td>
+                                                    <audio id="whoRU" controls>
+                                                        <source src="Audio/The Who - Who Are You.mp3" type="audio/mp3">
+                                                        Your browser does not support the audio element.
+                                                    </audio>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><label class="SoundLabel">Killswitch Engaged's To the Songs of Man</label></td>
+                                                <td><label class="SoundLabel">Killswitch Engaged's When Darkness Falls</label></td>
+                                                <td><label class="SoundLabel">Killswitch Engage- In Due Time</label></td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <audio controls>
+                                                        <source src="Audio/To the Sons of Man.mp3" type="audio/mp3">
+                                                        Your browser does not support the audio element.
+                                                    </audio>
+                                                </td>
+                                                <td>
+                                                    <audio controls>
+                                                        <source src="Audio/When Darkness Falls.mp3" type="audio/mp3">
+                                                        Your browser does not support the audio element.
+                                                    </audio>
+                                                </td>
+                                                <td>
+                                                    <audio id="dueTime" controls>
+                                                        <source src="Audio/Killswitch Engage - In Due Time.mp3" type="audio/mp3">
+                                                        Your browser does not support the audio element.
+                                                    </audio>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><label class="SoundLabel">The Four Seasons, Winter, Largo</label></td>
+                                                <td><label class="SoundLabel">The Four Seasons, Spring, Largo</label></td>
+                                                <td><label class="SoundLabel">Largo</label></td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <audio controls>
+                                                        <source src="Audio/The Four Seasons, Winter, Largo.mp3" type="audio/mp3">
+                                                        Your browser does not support the audio element.
+                                                    </audio>
+                                                </td>
+                                                <td>
+                                                    <audio id="springLargo" controls>
+                                                        <source src="Audio/The Four Seasons, Spring, Largo.mp3" type="audio/mp3">
+                                                        Your browser does not support the audio element.
+                                                    </audio>
+                                                </td>
+                                                <td>
+                                                    <audio id="largo" controls>
+                                                        <source src="Audio/Largo.mp3" type="audio/mp3">
+                                                        Your browser does not support the audio element.
+                                                    </audio>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><br /></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <td class="title" colspan=3>Effects</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td><label class="SoundLabel">Applause</label></td>
+                                                <td><label class="SoundLabel">Boo</label></td>
+                                                <td><label class="SoundLabel">Laugh</label></td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <audio controls="controls">
+                                                        <source src="Audio/Applause.wav" type="audio/wav" />
+                                                        Your browser does not support the audio element.
+                                                    </audio>
+                                                </td>
+                                                <td>
+                                                    <audio controls>
+                                                        <source src="Audio/Boo.wav" type="audio/wav">
+                                                        Your browser does not support the audio element.
+                                                    </audio>
+                                                </td>
+                                                <td>
+                                                    <audio controls>
+                                                        <source src="Audio/Laugh.wav" type="audio/wav">
+                                                        Your browser does not support the audio element.
+                                                    </audio>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><label class="SoundLabel">Record Scratch</label></td>
+                                                <td><label class="SoundLabel">Awe</label></td>
+                                                <td><label class="SoundLabel">Ooo</label></td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <audio controls>
+                                                        <source src="Audio/" type="audio/wav">
+                                                        Your browser does not support the audio element.
+                                                    </audio>
+                                                </td>
+                                                <td>
+                                                    <audio controls>
+                                                        <source src="Audio/" type="audio/wav">
+                                                        Your browser does not support the audio element.
+                                                    </audio>
+                                                </td>
+                                                <td>
+                                                    <audio controls>
+                                                        <source src="Audio/" type="audio/wav">
+                                                        Your browser does not support the audio element.
+                                                    </audio>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <table class="controlTable">
+                            <tr>
+                                <td class="SoundLabel">Timer</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <table style="margin: auto; padding: 0px; width: 500px;">
+                                        <tr>
+                                            <td>Minutes</td>
+                                            <td>Seconds</td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="number" class="input" id="min" min="0" value="0"></td>
+                                            <td><input type="number" class="input" id="sec" min="0" value="0"></td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><br /></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Timer (In seconds)
+                                    <br />
+                                    <input type="number" class="input" id="timer" style="text-align:center;" readonly>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><br /></td>
+                            </tr>
+                            <tr>
+                                <td><button class="button" id="setTimer">Set Timer</button>&nbsp;&nbsp;<button class="button" id="stop">Stop</button>&nbsp;&nbsp;<button class="button" id="play">Play</button></td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="panel-footer">
+            <table style="width: 960px; margin: auto; padding: 0px;">
+                <tr>
+                    <td><a class="button" href="Credits.html" target="_blank" style="width: 300px;">Credits</a></td>
+                    <td><a class="button" href="TeamScore.html" target="_blank" style="width: 300px;">Score</a></td>
+                    <td><a class="button" href="Tutorial.html" target="_blank" style="width: 300px;">Tutorial</a></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <script src="Script/SetUp.js" type="text/javascript"></script>
+    <script src="Script/Main.js" type="text/javascript"></script>
+</body>
+</html>
